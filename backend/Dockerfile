@@ -1,6 +1,7 @@
 FROM ubuntu:22.04
 
-RUN apt-get update && apt-get install -y g++
+RUN apt-get update --allow-insecure-repositories && \
+    apt-get install -y --allow-unauthenticated g++
 
 WORKDIR /app
 
